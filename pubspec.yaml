@@ -59,15 +59,15 @@ dependencies:
   carousel_slider: ^5.1.2
   flutter_rating_bar: ^4.0.1
 
-  # Firebase
-  firebase_core: ^4.9.0
-  firebase_auth: ^6.5.1
-  cloud_firestore: ^6.4.1
-  google_sign_in: ^7.2.0
-  firebase_storage: ^13.4.1
-  cached: ^1.8.1
-  network_image: ^0.1.1
-  cached_network_image: ^3.4.1
+# Firebase
+#  firebase_core: ^4.9.0
+#  firebase_auth: ^6.5.1
+#  cloud_firestore: ^6.4.1
+#  google_sign_in: ^7.2.0
+#  firebase_storage: ^13.4.1
+#  cached: ^1.8.1
+#  network_image: ^0.1.1
+#  cached_network_image: ^3.4.1
 
 
 dev_dependencies:
@@ -117,24 +117,24 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Light.ttf
-          weight: 300
-        - asset: assets/fonts/Poppins-Regular.ttf
-          weight: 400
-        - asset: assets/fonts/Poppins-Italic.ttf
-          style: italic
-        - asset: assets/fonts/Poppins-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/Poppins-MediumItalic.ttf
-          weight: 500
-          style: italic
-        - asset: assets/fonts/Poppins-SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/Poppins-Bold.ttf
-          weight: 800
+#  fonts:
+#    - family: Poppins
+#      fonts:
+#        - asset: assets/fonts/Poppins-Light.ttf
+#          weight: 300
+#        - asset: assets/fonts/Poppins-Regular.ttf
+#          weight: 400
+#        - asset: assets/fonts/Poppins-Italic.ttf
+#          style: italic
+#        - asset: assets/fonts/Poppins-Medium.ttf
+#          weight: 500
+#        - asset: assets/fonts/Poppins-MediumItalic.ttf
+#          weight: 500
+#          style: italic
+#        - asset: assets/fonts/Poppins-SemiBold.ttf
+#          weight: 600
+#        - asset: assets/fonts/Poppins-Bold.ttf
+#          weight: 800
 
     # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

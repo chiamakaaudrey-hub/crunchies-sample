@@ -1,4 +1,5 @@
 import 'package:crunchies/utilities/constants/image_strings.dart';
+import 'package:crunchies/utilities/constants/sizes.dart';
 import 'package:crunchies/utilities/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -39,8 +40,8 @@ class OnBoardingScreen extends StatelessWidget {
               OnBoardingPage(
                 image: ImageStrings.onBoardingImage3,
                 title: TextStrings.onBoardingTitle3,
-                subTitle: TextStrings.onBoardingSubTitle3,
-              ),OnBoardingPage(
+                subTitle: TextStrings.onBoardingSubTitle3),
+              OnBoardingPage(
                 image: ImageStrings.onBoardingImage4,
                 title: TextStrings.onBoardingTitle4,
                 subTitle: TextStrings.onBoardingSubTitle4,
@@ -50,6 +51,7 @@ class OnBoardingScreen extends StatelessWidget {
 
           /// Skip Button
           OnBoardingSkip(),
+
 
           /// Dot Navigation SmoothPageIndicator
           OnBoardingDotNavigation(),

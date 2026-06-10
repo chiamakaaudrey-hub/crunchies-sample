@@ -5,7 +5,9 @@ class AColors {
   // App Basic Colors
   static Color primary = Color(0xFF4B68FF);
   static Color secondary = Color(0xFFFFE24B);
-  static Color accent = Color(0xFFB0C7FF);
+  static Color accent = Color(0xFFFF2400);
+  static Color next = Color(0xFFFF2400);
+  static Color skip = Color(0xFFCD1C18);
 
   // Gradient Colors
   static Gradient linerGradient = LinearGradient(

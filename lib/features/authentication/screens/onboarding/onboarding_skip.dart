@@ -1,3 +1,4 @@
+import 'package:crunchies/utilities/constants/colors.dart';
 import 'package:crunchies/utilities/device/device_utilities.dart';
 import 'package:flutter/material.dart';
 import '../../../../utilities/constants/sizes.dart';
@@ -11,10 +12,11 @@ class OnBoardingSkip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: DeviceUtilities.getAppBarHeight(),
-      right: ASizes.defaultSpace,
+      bottom: DeviceUtilities.getBottomNavigationBarHeight(),
+      left: ASizes.defaultSpace,
       child: TextButton(
-          onPressed: () => OnBoardingController.instance.skipPage(),
-          child: Text('Skip')));
+          onPressed: () => OnBoardingController.instance.skipPage(), style: TextButton.styleFrom(foregroundColor: AColors.skip),
+          child: Text('Skip', style: TextStyle(fontSize: 18,
+            fontWeight: FontWeight.w600))));
   }
 }

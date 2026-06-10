@@ -14,7 +14,7 @@ class OnBoardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(ASizes.defaultSpace ),
+      padding: EdgeInsets.all(ASizes.defaultSpace),
       child: Column(
         children: [
           Image(
@@ -22,9 +22,9 @@ class OnBoardingPage extends StatelessWidget {
             height: HelperFunctions.screenHeight() * 0.6,
             image: AssetImage(image),
           ),
-          Text(title, style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
+          Text(title, style: Theme.of(context).textTheme.headlineLarge, textAlign: TextAlign.center, maxLines: 1),
           SizedBox(height: ASizes.spaceBtwItems),
-          Text(subTitle, style: Theme.of(context).textTheme.bodyMedium, textAlign: TextAlign.center
+          Text(subTitle, style: Theme.of(context).textTheme.bodyLarge, textAlign: TextAlign.center
           ),
         ],
       ),

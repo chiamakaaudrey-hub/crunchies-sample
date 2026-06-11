@@ -1,3 +1,4 @@
+import 'package:crunchies/features/authentication/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
@@ -6,7 +7,6 @@ import 'package:intl/intl.dart';
 class HelperFunctions {
   static Color? getColor(String value) {
     /// Define your product specific colors here and it will match the attribute colors and show specific colors
-
     if (value == 'Green') {
       return Colors.green;
     } else if (value == 'Green') {
@@ -65,9 +65,7 @@ class HelperFunctions {
   }
 
   static void navigateToScreen(BuildContext context, Widget screen) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => screen),
+    Navigator.push(context, MaterialPageRoute(builder: (_) => screen),
     );
   }
 
@@ -94,6 +92,7 @@ class HelperFunctions {
   static double screenWidth() {
     return MediaQuery.of(Get.context!).size.width;
   }
+
 
   static String getFormattedDate(DateTime date, {String format = 'dd MMM yyyy'}) {
     return DateFormat(format).format(date);

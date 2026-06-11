@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import '../screens/home/home_screen.dart';
 import '../screens/login/login.dart';
 
 class OnBoardingController extends GetxController {
@@ -37,7 +38,7 @@ class OnBoardingController extends GetxController {
         print(storage.read('IsFirstTime'));
       }
 
-      Get.offAll(LoginScreen());
+      Get.offAll(HomeScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);

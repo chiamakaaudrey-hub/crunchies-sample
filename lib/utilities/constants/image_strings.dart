@@ -7,8 +7,8 @@ class ImageStrings {
   static String onBoardingImage4 = "assets/images/on_boarding_images/onboarding_image_4.jpg";
 
   // -- App logos
-  static String darkAppLogo = "assets/logos/crunchies_logo.png";
-  static String lightAppLogo = "assets/logos/crunchies_logo.png";
+  static String darkAppLogo = "assets/logos/crunchies-logo.png";
+  static String lightAppLogo = "assets/logos/crunchies-logo.png";
 
 }
 

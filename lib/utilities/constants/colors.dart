@@ -5,7 +5,7 @@ class AColors {
   // App Basic Colors
   static Color primary = Color(0xFF4B68FF);
   static Color secondary = Color(0xFFFFE24B);
-  static Color accent = Color(0xFFFF2400);
+  static Color accent = Color(0xFFA9A9A9);
   static Color next = Color(0xFFFF2400);
   static Color skip = Color(0xFFCD1C18);
 

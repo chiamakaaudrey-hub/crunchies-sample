@@ -99,6 +99,7 @@ flutter:
     - assets/icons/brands/
     - assets/icons/payment_methods/
     - assets/images/on_boarding_images/
+    - assets/images/food/
     - assets/images/animations/
     - assets/images/banners/
     - assets/images/products/

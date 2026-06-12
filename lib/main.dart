@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'features/authentication/screens/home/home_screen.dart';
-import 'features/authentication/screens/splashscreen/splash_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'features/authentication/screens/signup/signup_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(CrunchiesApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CrunchiesApp extends StatelessWidget {
+  const CrunchiesApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      title: 'Crunchies',
+      theme: ThemeData(useMaterial3: true, scaffoldBackgroundColor: const Color(0xffF8F8F8), textTheme: GoogleFonts.poppinsTextTheme(),
+      ),
+      home: const SignupScreen(),
     );
   }
 }

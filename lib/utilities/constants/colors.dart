@@ -9,6 +9,14 @@ class AColors {
   static Color next = Color(0xFFFF2400);
   static Color skip = Color(0xFFCD1C18);
 
+  static Color primaryRed = Color(0xFFE6003D);
+  static Color buttonRed = Color(0xFFF4003D);
+  static Color navy = Color(0xFF12154B);
+  static Color lightPink = Color(0xFFFCEEEF);
+  static Color background = Color(0xFFF8F8F8);
+  static Color border = Color(0xFFE5E5E5);
+  static Color textGrey = Color(0xFF667085);
+
   // Gradient Colors
   static Gradient linerGradient = LinearGradient(
       begin: Alignment(0.0, 0.0),

@@ -49,16 +49,28 @@ class _LocationScreenState extends State<LocationScreen> {
           padding: const EdgeInsets.all(24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              /// Header
-              Text(
-                'Enter Location',
-                style: TextStyle(
-                  color: AColors.navy,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w700,
+              children: [
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: IconButton(
+                    onPressed: () => Get.back(),
+                    icon: const Icon(
+                      Icons.arrow_back_ios_new,
+                      size: 22,
+                    ),
+                  ),
                 ),
-              ),
+
+                const SizedBox(height: 10),
+
+                Text(
+                  'Enter Location',
+                  style: TextStyle(
+                    color: AColors.navy,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
 
               const SizedBox(height: 10),
 

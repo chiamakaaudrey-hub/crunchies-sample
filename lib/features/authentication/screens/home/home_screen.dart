@@ -1,4 +1,8 @@
+import 'package:crunchies/features/authentication/screens/home/a_banner.dart';
+import 'package:crunchies/features/authentication/screens/login/widgets/location_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'category_item.dart';
 import 'food_card.dart';
 
@@ -16,10 +20,7 @@ class HomeScreen extends StatelessWidget {
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_offer_outlined),
             label: 'Offers',
@@ -45,7 +46,6 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               /// HEADER
               Row(
                 children: [
@@ -61,23 +61,10 @@ class HomeScreen extends StatelessWidget {
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'Good morning, Chiamaka.',
-                          style: TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xff15133C),
-                          ),
-                        ),
+                      children: [
+                        Text('Good morning, Chiamaka.', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xff15133C))),
                         SizedBox(height: 4),
-                        Text(
-                          "It's time for breakfast - Taste the difference!",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 16,
-                          ),
-                        ),
+                        Text("It's time for breakfast - Taste the difference!", style: TextStyle(color: Colors.grey, fontSize: 12), maxLines: 1),
                       ],
                     ),
                   ),
@@ -87,135 +74,49 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 24),
 
               /// LOCATION CARD
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: Colors.red.shade50,
-                  borderRadius: BorderRadius.circular(20),
+        InkWell(
+          borderRadius: BorderRadius.circular(20),
+          onTap: () => Get.to(() => const LocationScreen()),
+          child: Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.red.shade50,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Row(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Colors.red.shade100,
+                  child: const Icon(
+                    Icons.store,
+                    color: Colors.red,
+                  ),
                 ),
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.red.shade100,
-                      child: const Icon(
-                        Icons.store,
-                        color: Colors.red,
-                      ),
-                    ),
 
-                    const SizedBox(width: 16),
+                const SizedBox(width: 16),
 
-                    const Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Ordering from:',
-                            style: TextStyle(
-                              color: Colors.grey,
-                            ),
-                          ),
-                          SizedBox(height: 4),
-                          Text(
-                            'Crunchies Fried Chicken',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    const Icon(Icons.arrow_forward_ios),
-                  ],
+                const Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Ordering from:', style: TextStyle(color: Colors.grey)),
+                      SizedBox(height: 4),
+                      Text('Crunchies Fried Chicken, 262 Agbani Road, Enugu', maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontWeight: FontWeight.w400, fontSize: 15)),
+                    ],
+                  ),
                 ),
-              ),
-
-              const SizedBox(height: 24),
-
-        /// BANNER
-        SizedBox(
-          height: 180,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Image.asset(
-                  'assets/images/banners/banner_1.jpg',
-                  width: 320,
-                  fit: BoxFit.cover,
+                const Icon(
+                  Icons.arrow_forward_outlined,
+                  color: Colors.black,
                 ),
-              ),
-
-              const SizedBox(width: 12),
-
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Image.asset(
-                  'assets/images/banners/banner_2.jpg',
-                  width: 320,
-                  fit: BoxFit.cover,
-                ),
-              ),
-
-              const SizedBox(width: 12),
-
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Image.asset(
-                  'assets/images/banners/banner_3.jpg',
-                  width: 320,
-                  fit: BoxFit.cover,
-                ),
-              ),
-
-              const SizedBox(width: 12),
-
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Image.asset(
-                  'assets/images/banners/banner_4.jpg',
-                  width: 320,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              const SizedBox(width: 12),
-
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Image.asset(
-                  'assets/images/banners/banner_5.jpg',
-                  width: 320,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              const SizedBox(width: 12),
-
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Image.asset(
-                  'assets/images/banners/banner_6.jpg',
-                  width: 320,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              const SizedBox(width: 12),
-
-              ClipRRect(
-                borderRadius: BorderRadius.circular(25),
-                child: Image.asset(
-                  'assets/images/banners/banner_7.jpg',
-                  width: 320,
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
+      const SizedBox(height: 24),
 
-        const SizedBox(height: 30),
+              /// BANNER
+              ABanner(),
 
               const SizedBox(height: 30),
 
@@ -226,7 +127,7 @@ class HomeScreen extends StatelessWidget {
                     child: Text(
                       'How may we delight you today?',
                       style: TextStyle(
-                        fontSize: 34,
+                        fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: Color(0xff15133C),
                       ),
@@ -240,53 +141,25 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.red.shade50,
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(
-                      Icons.search,
-                      color: Colors.red,
-                    ),
+                    child: Icon(Icons.search_outlined, color: Colors.red, size: 55),
                   ),
                 ],
               ),
 
               const SizedBox(height: 30),
 
-              const Text(
-                'Categories',
-                style: TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-
-              const SizedBox(height: 16),
-
               /// CATEGORIES
+              const Text('Categories', style: TextStyle(fontSize: 26, fontWeight: FontWeight.w600)),
+              const SizedBox(height: 16),
               SizedBox(
                 height: 100,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: const [
-                    CategoryItem(
-                      icon: Icons.fastfood,
-                      title: 'All',
-                      selected: true,
-                    ),
-                    CategoryItem(
-                      icon: Icons.rice_bowl,
-                      title: 'Food',
-                    ),
-                    CategoryItem(
-                      icon: Icons.egg,
-                      title: 'Protein',
-                    ),
-                    CategoryItem(
-                      icon: Icons.donut_small,
-                      title: 'Pastry',
-                    ),
-                    CategoryItem(
-                      icon: Icons.cake,
-                      title: 'Cake',
-                    ),
+                child: ListView(scrollDirection: Axis.horizontal,
+                children:[
+                    CategoryItem(image: "assets/images/categories/all.png", title: 'All'),
+                    CategoryItem(image: "assets/images/categories/food.png", title: 'Food'),
+                    CategoryItem(image: "assets/images/categories/protein.png", title: 'Protein'),
+                    CategoryItem(image: "assets/images/categories/pastry.png", title: 'Pastry'),
+                    CategoryItem(image: "assets/images/categories/cake.png", title: 'Cake'),
                   ],
                 ),
               ),
@@ -295,10 +168,7 @@ class HomeScreen extends StatelessWidget {
 
               const Text(
                 'FOOD',
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
 
               const SizedBox(height: 20),
@@ -334,11 +204,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ],
               ),
-          ]),
-        ),
-      ));
+      ]),
+    )));
   }
 }
-
-
-

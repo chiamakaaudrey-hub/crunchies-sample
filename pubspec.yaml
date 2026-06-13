@@ -103,6 +103,7 @@ flutter:
     - assets/images/on_boarding_images/
     - assets/images/food/
     - assets/images/animations/
+    - assets/images/categories/
     - assets/images/banners/
     - assets/images/products/
     - assets/images/user/

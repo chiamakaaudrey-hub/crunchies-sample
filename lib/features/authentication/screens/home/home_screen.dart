@@ -3,6 +3,7 @@ import 'package:crunchies/features/authentication/screens/login/widgets/location
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import '../navigation/widgets/support_screen.dart';
 import 'category_item.dart';
 import 'food_card.dart';
 
@@ -13,33 +14,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.grey,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.local_offer_outlined),
-            label: 'Offers',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.card_giftcard),
-            label: 'Loyalty',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.support_agent),
-            label: 'Support',
-          ),
-        ],
-      ),
-
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
@@ -113,13 +87,31 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-      const SizedBox(height: 24),
+              const SizedBox(height: 24),
+
+              /// HAVING ISSUES BUTTON
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton.icon(
+                  onPressed: () => Get.to(() => SupportScreen()),
+                  label: const Text(
+                    'Having issues?',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      decoration: TextDecoration.underline, decorationColor: Colors.red, decorationThickness: 3,
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 8),
 
               /// BANNER
               ABanner(),
 
               const SizedBox(height: 30),
-
               /// TITLE + SEARCH
               Row(
                 children: [
@@ -141,10 +133,12 @@ class HomeScreen extends StatelessWidget {
                       color: Colors.red.shade50,
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(Icons.search_outlined, color: Colors.red, size: 55),
+                    child: IconButton(
+                      onPressed: () {}, // => Get.to(() => SearchScreen()),
+                    icon:  Icon(Icons.search_outlined, color: Colors.red, size: 55),
                   ),
-                ],
-              ),
+                  ),
+              ]),
 
               const SizedBox(height: 30),
 

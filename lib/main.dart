@@ -1,4 +1,8 @@
 import 'package:crunchies/features/authentication/screens/home/home_screen.dart';
+import 'package:crunchies/features/authentication/screens/login/login.dart';
+import 'package:crunchies/features/authentication/screens/navigation/widgets/support_screen.dart';
+import 'package:crunchies/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:crunchies/features/authentication/screens/splashscreen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +22,7 @@ class CrunchiesApp extends StatelessWidget {
       title: 'Crunchies',
       theme: ThemeData(useMaterial3: true, scaffoldBackgroundColor: const Color(0xffF8F8F8), textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: const HomeScreen(),
+      home: const SupportScreen(),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:crunchies/features/authentication/screens/navigation/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
@@ -171,8 +172,7 @@ class _LocationScreenState extends State<LocationScreen> {
                 child: ElevatedButton(
                   onPressed: isFormValid
                       ? () {
-                    Get.offAll(
-                          () => const HomeScreen(),
+                    Get.offAll(() => NavigationMenu(),
                     );
                   }
                       : null,

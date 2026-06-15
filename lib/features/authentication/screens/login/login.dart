@@ -1,4 +1,8 @@
+import 'package:crunchies/features/authentication/screens/home/home_screen.dart';
+import 'package:crunchies/features/authentication/screens/signup/widgets/phone_no_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -57,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => HomeScreen()),
                     child: const Text(
                       "View as guest",
                       style: TextStyle(
@@ -231,7 +235,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 height: 65,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => PhoneNoAuth(phoneNumber: '')),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xffF4003D),
                     elevation: 0,

@@ -58,9 +58,13 @@ class TextStrings {
   static String homeAppbarTitle = "Good day for shopping";
   static String homeAppbarSubTitle = "Taimoor Sikander";
 
-// -- Product
+ // -- Product
   static String popularProducts = "Popular Products";
   static String featuredProducts = "Featured Products";
+
+  // --
+  static String supportTitle= "Support";
+  static String supportSubTitle = "We are here to assist you any time. Reach out to us through any of our platform below";
 
 }
 

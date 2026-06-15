@@ -1,4 +1,5 @@
 import 'package:crunchies/features/authentication/screens/home/home_screen.dart';
+import 'package:crunchies/features/authentication/screens/navigation/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -25,10 +26,8 @@ class SupportScreen extends StatelessWidget {
                 /// Back Button
                 Align(
                   alignment: AlignmentGeometry.centerLeft,
-                  child: IconButton(
-                      onPressed: () {
-                        Get.offAll(() => const HomeScreen());
-                      },
+                  child: IconButton(onPressed: () {Get.offAll(() => NavigationMenu());
+                    },
                       icon: Icon(Icons.arrow_back_ios_new,
                     color: Color(0xFF17123B),
                   ),

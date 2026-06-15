@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'loyalty_form_screen.dart';
 import 'loyalty_item.dart';
 
 class LoyaltyScreen extends StatelessWidget {
@@ -86,8 +87,7 @@ class LoyaltyScreen extends StatelessWidget {
                 width: double.infinity,
                 height: 60,
                 child: ElevatedButton(
-                  onPressed: () {
-                    // Navigate to loyalty dashboard
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const LoyaltyFormScreen()));
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFFE5093B),
